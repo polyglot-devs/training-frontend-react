@@ -3,10 +3,11 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import Thread from "./components/thread/Thread";
+import Label from "./components/label/Label";
 
 function App() {
   const [count, setCount] = useState(0);
-
+  const row = { display: "flex", flexDirection: "row", gap: "10px" };
   return (
     <>
       <div>
@@ -18,8 +19,15 @@ function App() {
         </a>
       </div>
       <h1>Bzirrrr</h1>
-      <Thread></Thread>
-      <Thread></Thread>
+      <div style={row}>
+        <Label color="red">For Riska</Label>
+        <Label color="blue">asdf</Label>
+        <Label color="green">rngj</Label>
+        <Label color="orange">rjegvoa</Label>
+        <Label color="purple">tiabf</Label>
+      </div>
+
+      {/* <Thread></Thread> */}
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
