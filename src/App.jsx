@@ -4,6 +4,8 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Thread from "./components/thread/Thread";
 import Label from "./components/label/Label";
+import Counter from "./components/counter/Counter";
+import Task from "./components/task/Task";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -26,12 +28,15 @@ function App() {
         <Label color="orange">rjegvoa</Label>
         <Label color="purple">tiabf</Label>
       </div>
+      <Task>Belajar</Task>
+      <Task>Memasak</Task>
+      <Task>Laundry</Task>
 
       {/* <Thread></Thread> */}
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+        <Counter number={-5}></Counter>
+        <Counter number={10}></Counter>
+        <Counter></Counter>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
